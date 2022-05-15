@@ -23,7 +23,11 @@ def start(message):
 def bot_message(message):
     if message.chat.type == 'private':
         if message.text == 'Преподаватель':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            back = types.KeyboardButton('Назад')
+            markup.add(back)
             bot.send_message(message.chat.id, 'Введите фамилию',reply_markup = markup)
+
 
         elif message.text == 'Студент':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -42,7 +46,7 @@ def bot_message(message):
 
                 markup.add(item1, item2)
 
-                bot.send_message(message.chat.id,'Назад',reply_markup = markup)
+                bot.send_message(message.chat.id,'Выберите студент или преподаватель', reply_markup = markup)
 
 
 
