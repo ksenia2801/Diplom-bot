@@ -21,7 +21,7 @@ def start(message):
 
 @bot.message_handler(content_types=['text'])
 def bot_message(message):
-    if message.chat.type == 'privite':
+    if message.chat.type == 'private':
         if message.text == 'Преподаватель':
             bot.send_message(message.chat.id, 'Введите фамилию',reply_markup = markup)
 
