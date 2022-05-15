@@ -23,26 +23,26 @@ def start(message):
 def bot_message(message):
     if message.chat.type == 'privite':
         if message.text == 'Преподаватель':
-            bot.send_message(message.chat.id, 'Введите фамилию', reply_markup = markup)
+            bot.send_message(message.chat.id, 'Введите фамилию',reply_markup = markup)
 
-         elif message.text == 'Студент':
-             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-             item1 = types.KeyboardButton('ФСУ')
-             item2 = types.KeyboardButton('ФВС')
-             item3 = types.KeyboardButton('РТФ')
-             back = types.KeyboardButton('Назад')
-             markup.add(item1, item2, item3, back)
+        elif message.text == 'Студент':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton('ФСУ')
+            item2 = types.KeyboardButton('ФВС')
+            item3 = types.KeyboardButton('РТФ')
+            back = types.KeyboardButton('Назад')
+            markup.add(item1, item2, item3, back)
 
-             bot.send_message(message.chat.id,'Студент',reply_markup = markup)
+            bot.send_message(message.chat.id,'Выберите факультет',reply_markup = markup)
 
-         elif message.text == 'Назад':
-                 markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-                 item1 = types.KeyboardButton('Преподаватель')
-                 item2 = types.KeyboardButton('Студент')
+        elif message.text == 'Назад':
+                markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+                item1 = types.KeyboardButton('Преподаватель')
+                item2 = types.KeyboardButton('Студент')
 
-                 markup.add(item1, item2)
+                markup.add(item1, item2)
 
-                 bot.send_message(message.chat.id,'Назад',reply_markup = markup)
+                bot.send_message(message.chat.id,'Назад',reply_markup = markup)
 
 
 
