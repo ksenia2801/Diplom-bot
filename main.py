@@ -31,11 +31,18 @@ def bot_message(message):
 
         elif message.text == 'Студент':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            item1 = types.KeyboardButton('ФСУ')
-            item2 = types.KeyboardButton('ФВС')
-            item3 = types.KeyboardButton('РТФ')
+            item1 = types.KeyboardButton('РТФ')
+            item2 = types.KeyboardButton('РКФ')
+            item3 = types.KeyboardButton('ФСУ')
+            item4 = types.KeyboardButton('ФВС')
+            item5 = types.KeyboardButton('ФЭТ')
+            item6 = types.KeyboardButton('ФИТ')
+            item7 = types.KeyboardButton('ЭФ')
+            item8 = types.KeyboardButton('ГФ')
+            item9 = types.KeyboardButton('ЮФ')
+            item10 = types.KeyboardButton('ФБ')
             back = types.KeyboardButton('Назад')
-            markup.add(item1, item2, item3, back)
+            markup.add(item1, item2, item3,item4, item5, item6,item7, item8, item9,item10, back)
 
             bot.send_message(message.chat.id,'Выберите факультет',reply_markup = markup)
 
