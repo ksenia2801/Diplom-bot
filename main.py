@@ -696,7 +696,7 @@ def bot_message(message):
                 item2 = types.KeyboardButton('2-й')
                 item3 = types.KeyboardButton('3-й')
                 item4 = types.KeyboardButton('4-й')
-                item5 = types.KeyboardButton('4-й')
+                item5 = types.KeyboardButton('5-й')
                 back = types.KeyboardButton('Назад')
                 markup.add(item1, item2, item3, item4,item5, back)
 
