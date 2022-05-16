@@ -592,8 +592,6 @@ def bot_message(message):
 
             bot.send_message(message.chat.id, 'Выберите номер группы', reply_markup=markup)
 
-
-
         elif message.text == 'ГФ':
                 markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
                 item1 = types.KeyboardButton('1-й')
@@ -604,6 +602,44 @@ def bot_message(message):
                 markup.add(item1, item2, item3, item4, back)
 
                 bot.send_message(message.chat.id, 'Выберите курс', reply_markup=markup)
+
+        elif message.text == '1-й':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton('611')
+            item2 = types.KeyboardButton('621')
+            item3 = types.KeyboardButton('631-1')
+            item4 = types.KeyboardButton('631-2')
+            back = types.KeyboardButton('Назад')
+            markup.add(item1, item2, item3, item4, back)
+
+            bot.send_message(message.chat.id, 'Выберите номер группы', reply_markup=markup)
+
+        elif message.text == '2-й':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton('610-1')
+            item2 = types.KeyboardButton('620-1')
+            back = types.KeyboardButton('Назад')
+            markup.add(item1, item2, back)
+
+            bot.send_message(message.chat.id, 'Выберите номер группы', reply_markup=markup)
+
+        elif message.text == '3-й':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton('619')
+            item2 = types.KeyboardButton('629')
+            back = types.KeyboardButton('Назад')
+            markup.add(item1, item2, back)
+
+            bot.send_message(message.chat.id, 'Выберите номер группы', reply_markup=markup)
+
+        elif message.text == '4-й':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton('618')
+            item2 = types.KeyboardButton('628')
+            back = types.KeyboardButton('Назад')
+            markup.add(item1, item2, back)
+
+            bot.send_message(message.chat.id, 'Выберите номер группы', reply_markup=markup)
 
         elif message.text == 'ЮФ':
                 markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
