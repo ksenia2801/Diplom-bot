@@ -411,6 +411,68 @@ def bot_message(message):
 
                 bot.send_message(message.chat.id, 'Выберите курс', reply_markup=markup)
 
+        elif message.text == '1-й':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton('311-1')
+            item2 = types.KeyboardButton('311-2')
+            item3 = types.KeyboardButton('311-M')
+            item4 = types.KeyboardButton('321-1')
+            item5 = types.KeyboardButton('321-2')
+            item6 = types.KeyboardButton('341')
+            item7 = types.KeyboardButton('341-M')
+            item8 = types.KeyboardButton('351-1')
+            item9 = types.KeyboardButton('351-M')
+            item10 = types.KeyboardButton('361-1')
+            item11 = types.KeyboardButton('361-2')
+            item12 = types.KeyboardButton('361-3')
+            item13 = types.KeyboardButton('361-M1')
+            item14 = types.KeyboardButton('361-M2')
+            back = types.KeyboardButton('Назад')
+            markup.add(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, back)
+
+            bot.send_message(message.chat.id, 'Выберите курс', reply_markup=markup)
+
+        elif message.text == '2-й':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton('310')
+            item2 = types.KeyboardButton('320-1')
+            item3 = types.KeyboardButton('320-2')
+            item4 = types.KeyboardButton('340')
+            item5 = types.KeyboardButton('350')
+            item6 = types.KeyboardButton('360-1')
+            item7 = types.KeyboardButton('360-2')
+            item8 = types.KeyboardButton('360-4')
+            back = types.KeyboardButton('Назад')
+            markup.add(item1, item2, item3, item4, item5, item6, item7, item8, back)
+
+            bot.send_message(message.chat.id, 'Выберите номер группы', reply_markup=markup)
+
+        elif message.text == '3-й':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton('319')
+            item2 = types.KeyboardButton('329-1')
+            item3 = types.KeyboardButton('349')
+            item4 = types.KeyboardButton('359')
+            item5 = types.KeyboardButton('369-1')
+            item6 = types.KeyboardButton('369-2')
+            back = types.KeyboardButton('Назад')
+            markup.add(item1, item2, item3, item4, item5, item6, back)
+
+            bot.send_message(message.chat.id, 'Выберите номер группы', reply_markup=markup)
+
+        elif message.text == '4-й':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item1 = types.KeyboardButton('318')
+            item2 = types.KeyboardButton('328-1')
+            item3 = types.KeyboardButton('348-1')
+            item4 = types.KeyboardButton('358')
+            item5 = types.KeyboardButton('368-1')
+            item6 = types.KeyboardButton('368-2')
+            back = types.KeyboardButton('Назад')
+            markup.add(item1, item2, item3, item4, item5, item6, back)
+
+            bot.send_message(message.chat.id, 'Выберите номер группы', reply_markup=markup)
+
         elif message.text == 'ФИТ':
                 markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
                 item1 = types.KeyboardButton('1-й')
